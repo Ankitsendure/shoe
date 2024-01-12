@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333; /* Dark gray header background */
+            color: #fff; /* White text color */
+        }
+
+        #shoe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            position: relative;
+        }
+
+        #shoe-image {
+            width: 200px;
+            transition: transform 0.3s; /* Smooth transition on hover */
+        }
+
+        #shoe-image:hover {
+            transform: scale(1.2); /* Increase size on hover */
+        }
+
+        #shoe-details {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 10px;
+            text-align: center;
+            z-index: 1; /* Bring details above the image */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333; /* Dark gray footer background */
+            color: #fff; /* White text color */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="color: #66ccff;">Stylish Shoes</h1>
+</header>
+
+<div id="shoe-container">
+    <div id="shoe-details">
+        <h2 style="color: #ff9900;">Comfort Sneakers</h2>
+        <p style="color: #666;">Experience comfort like never before with our stylish sneakers. Perfect for daily wear!</p>
+    </div>
+    <img id="shoe-image" src="data:image/jpeg;base64,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" alt="Comfort Sneakers">
+</div>
+
+<footer>
+    <p style="color: #66ccff;">&copy; 2024 Stylish Shoes. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
